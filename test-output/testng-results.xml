@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="87853" started-at="2019-09-09T03:31:14 IST" finished-at="2019-09-09T03:32:42 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="87853" started-at="2019-09-09T03:31:14 IST" finished-at="2019-09-09T03:32:42 IST">
+      <class name="tests.AmazonTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.AmazonTest@50b494a6]" name="setup" is-config="true" duration-ms="12966" started-at="2019-09-09T03:31:14 IST" finished-at="2019-09-09T03:31:27 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_Home_Page()[pri:0, instance:tests.AmazonTest@50b494a6]" name="test_Home_Page" duration-ms="44" started-at="2019-09-09T03:31:27 IST" finished-at="2019-09-09T03:31:27 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Home_Page -->
+        <test-method status="PASS" signature="Loginnn()[pri:1, instance:tests.AmazonTest@50b494a6]" name="Loginnn" duration-ms="28119" started-at="2019-09-09T03:31:27 IST" finished-at="2019-09-09T03:31:55 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Loginnn -->
+        <test-method status="PASS" signature="ProductSearch()[pri:2, instance:tests.AmazonTest@50b494a6]" name="ProductSearch" duration-ms="44776" started-at="2019-09-09T03:31:55 IST" finished-at="2019-09-09T03:32:40 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ProductSearch -->
+        <test-method status="PASS" signature="Logout()[pri:3, instance:tests.AmazonTest@50b494a6]" name="Logout" duration-ms="1907" started-at="2019-09-09T03:32:40 IST" finished-at="2019-09-09T03:32:42 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+      </class> <!-- tests.AmazonTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
