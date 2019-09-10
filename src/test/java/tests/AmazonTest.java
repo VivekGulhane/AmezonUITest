@@ -15,6 +15,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -79,10 +81,7 @@ public class AmazonTest extends Support{
 	 @Test(priority=0)
 	    public void Open_Home_Page(){
 	        //Create Page object			
-			objAmzLoginPg = new AmazonLoginPage(driver);
 			objAmzHomePg = new AmazonHomePage(driver);
-			objAmzCheckoutPg = new AmazonCheckoutPage(driver);
-			objAmzLogoutPg = new AmazonLogoutPage(driver);			
 			
 			//Verify home page title
 		    String homePageTitle = objAmzHomePg.getHomePageTitle();
@@ -91,21 +90,18 @@ public class AmazonTest extends Support{
 		    @Test(priority=1)
 		    public void Loginnn(){
 				objAmzLoginPg = new AmazonLoginPage(driver);
-				objAmzHomePg = new AmazonHomePage(driver);
-				objAmzCheckoutPg = new AmazonCheckoutPage(driver);
-				objAmzLogoutPg = new AmazonLogoutPage(driver);
-		    	//login to application
-		    objAmzLoginPg.loginToAmazon("7972955471","Vivek007");
+
+				//login to application
+		    objAmzLoginPg.loginToAmazon("7972955471","Vivek007");//Can parameterized this to validate positive negative test cases
 		    String userName = objAmzHomePg.getLoggedInUser();
 		    Assert.assertEquals(userName, "Hello, Vivek", "Logged in user in not correct");
 		    }
 		    
 		    @Test(priority=2)
 		    public void ProductSearch(){
-				objAmzLoginPg = new AmazonLoginPage(driver);
 				objAmzHomePg = new AmazonHomePage(driver);
 				objAmzCheckoutPg = new AmazonCheckoutPage(driver);
-				objAmzLogoutPg = new AmazonLogoutPage(driver);
+
 		    	//Search Product
 		    objAmzHomePg.searchProduct("Apple iPhone X");
 		    String currentUrl = driver.getCurrentUrl();
@@ -126,11 +122,13 @@ public class AmazonTest extends Support{
 	 @Test(priority=3)
 	    public void Logout(){
 		 //log out 
-			objAmzLoginPg = new AmazonLoginPage(driver);
-			objAmzHomePg = new AmazonHomePage(driver);
-			objAmzCheckoutPg = new AmazonCheckoutPage(driver);
 			objAmzLogoutPg = new AmazonLogoutPage(driver);
 		 objAmzLogoutPg.logoutAmazon();
 		 Assert.assertTrue(objAmzLogoutPg.getPageTitle().contains("Amazon Sign In"), "Either Page title is incorrect after logout or not logout successifully");
 	 }
+	 
+		@AfterTest
+		public void afterClass() {
+			driver.quit();
+		}
 }
