@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="70673" started-at="2019-09-10T11:15:00 IST" finished-at="2019-09-10T11:16:10 IST">
+  <suite name="Default suite" duration-ms="96888" started-at="2019-09-10T11:34:53 IST" finished-at="2019-09-10T11:36:30 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="70673" started-at="2019-09-10T11:15:00 IST" finished-at="2019-09-10T11:16:10 IST">
+    <test name="Default test" duration-ms="96888" started-at="2019-09-10T11:34:53 IST" finished-at="2019-09-10T11:36:30 IST">
       <class name="tests.AmazonTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.AmazonTest@32709393]" name="setup" is-config="true" duration-ms="11187" started-at="2019-09-10T11:15:00 IST" finished-at="2019-09-10T11:15:11 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.AmazonTest@32709393]" name="setup" is-config="true" duration-ms="13973" started-at="2019-09-10T11:34:53 IST" finished-at="2019-09-10T11:35:07 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Open_Home_Page()[pri:0, instance:tests.AmazonTest@32709393]" name="Open_Home_Page" duration-ms="42" started-at="2019-09-10T11:15:11 IST" finished-at="2019-09-10T11:15:11 IST">
+        <test-method status="PASS" signature="Open_Home_Page()[pri:0, instance:tests.AmazonTest@32709393]" name="Open_Home_Page" duration-ms="34" started-at="2019-09-10T11:35:07 IST" finished-at="2019-09-10T11:35:07 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Open_Home_Page -->
-        <test-method status="PASS" signature="Loginnn()[pri:1, instance:tests.AmazonTest@32709393]" name="Loginnn" duration-ms="13741" started-at="2019-09-10T11:15:11 IST" finished-at="2019-09-10T11:15:25 IST">
+        <test-method status="PASS" signature="Loginnn()[pri:1, instance:tests.AmazonTest@32709393]" name="Loginnn" duration-ms="13237" started-at="2019-09-10T11:35:07 IST" finished-at="2019-09-10T11:35:20 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Loginnn -->
-        <test-method status="PASS" signature="ProductSearch()[pri:2, instance:tests.AmazonTest@32709393]" name="ProductSearch" duration-ms="42891" started-at="2019-09-10T11:15:25 IST" finished-at="2019-09-10T11:16:08 IST">
+        <test-method status="PASS" signature="ProductSearch()[pri:2, instance:tests.AmazonTest@32709393]" name="ProductSearch" duration-ms="66638" started-at="2019-09-10T11:35:20 IST" finished-at="2019-09-10T11:36:27 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ProductSearch -->
-        <test-method status="PASS" signature="Logout()[pri:3, instance:tests.AmazonTest@32709393]" name="Logout" duration-ms="1992" started-at="2019-09-10T11:16:08 IST" finished-at="2019-09-10T11:16:10 IST">
+        <test-method status="PASS" signature="Logout()[pri:3, instance:tests.AmazonTest@32709393]" name="Logout" duration-ms="2208" started-at="2019-09-10T11:36:27 IST" finished-at="2019-09-10T11:36:29 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Logout -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.AmazonTest@32709393]" name="afterClass" is-config="true" duration-ms="760" started-at="2019-09-10T11:16:10 IST" finished-at="2019-09-10T11:16:10 IST">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.AmazonTest@32709393]" name="afterClass" is-config="true" duration-ms="760" started-at="2019-09-10T11:36:29 IST" finished-at="2019-09-10T11:36:30 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
