@@ -5,9 +5,12 @@
     <classes>
       <class name="tests.AmazonTest">
         <methods>
+          <include name="afterClass"/>
           <include name="ProductSearch"/>
-          <include name="test_Home_Page"/>
+          <include name="Logout"/>
+          <include name="Loginnn"/>
           <include name="setup"/>
+          <include name="Open_Home_Page"/>
         </methods>
       </class> <!-- tests.AmazonTest -->
     </classes>

@@ -18,6 +18,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import pages.AmazonCheckoutPage;
@@ -34,41 +35,44 @@ public class AmazonTest extends Support {
 	AmazonCheckoutPage objAmzCheckoutPg;
 	AmazonLogoutPage objAmzLogoutPg;
 
+
 	@BeforeTest
-	public void setup() {
-
-		String browser = "chrome";
-		String os = "Windows 10";
+	@Parameters({"browserName","platform"})
+	public void setup(String browserName, String platform) {
+		String url = "https://www.amazon.in";
+		String search_text = "Apple iPhone X";
 		String driverPath = System.getProperty("user.dir") + "\\drivers";
-		System.out.println("driverPath  " + driverPath);
 
-		if (os.toLowerCase().contains("win")) {
-			if (browser.equalsIgnoreCase("Firefox")) {
+		if (platform.toLowerCase().contains("win")) {
+			if (browserName.equalsIgnoreCase("firefox")) {
 				System.setProperty("webdriver.firefox.marionette", driverPath + "\\geckodriver.exe");
 				driver = new FirefoxDriver();
 
-			} else if (browser.equalsIgnoreCase("chrome")) {
+			} else if (browserName.equalsIgnoreCase("chrome")) {
 				System.setProperty("webdriver.chrome.driver", driverPath + "\\chromedriver.exe");
 				driver = new ChromeDriver();
+			} else {
+				System.out.println("Please provide correct browser name");
 			}
 
-		} else if (os.toLowerCase().contains("linux")) {
-			if (browser.equalsIgnoreCase("Firefox")) {
+		} else if (platform.toLowerCase().contains("linux")) {
+			if (browserName.equalsIgnoreCase("firefox")) {
 				System.setProperty("webdriver.firefox.marionette", driverPath + "\\geckodriver");
 				driver = new FirefoxDriver();
 
-			} else if (browser.equalsIgnoreCase("chrome")) {
+			} else if (browserName.equalsIgnoreCase("chrome")) {
 				System.setProperty("webdriver.chrome.driver", driverPath + "\\chromedriver");
 				driver = new ChromeDriver();
+			} else {
+				System.out.println("Please provide correct browser name");
 			}
 
+		} else {
+			System.out.println("Please provide correct os name");
 		}
 
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		String url = "https://www.amazon.in";
-		String search_text = "Apple iPhone X";
-
 		driver.get(url);
 
 	}
@@ -106,7 +110,7 @@ public class AmazonTest extends Support {
 		String currentUrl = driver.getCurrentUrl();
 
 		// open new tab
-		openNewTab();
+		openNewTab(driver);
 
 		// handle windows
 		String base = driver.getWindowHandle();

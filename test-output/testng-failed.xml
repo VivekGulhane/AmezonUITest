@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [AmazonTestSuite]">
+  <test thread-count="5" name="AmazonTestUsingPageFactory(failed)">
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="platform" value="windows 10"/>
     <classes>
       <class name="tests.AmazonTest">
         <methods>
+          <include name="afterClass"/>
           <include name="ProductSearch"/>
-          <include name="test_Home_Page"/>
+          <include name="Loginnn"/>
           <include name="setup"/>
         </methods>
       </class> <!-- tests.AmazonTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- AmazonTestUsingPageFactory(failed) -->
+</suite> <!-- Failed suite [AmazonTestSuite] -->

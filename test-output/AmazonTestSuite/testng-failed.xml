@@ -2,10 +2,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [AmazonTestSuite]">
   <test thread-count="5" name="AmazonTestUsingPageFactory(failed)">
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="platform" value="windows 10"/>
     <classes>
       <class name="tests.AmazonTest">
         <methods>
-          <include name="test_Home_Page"/>
+          <include name="afterClass"/>
+          <include name="ProductSearch"/>
+          <include name="Loginnn"/>
           <include name="setup"/>
         </methods>
       </class> <!-- tests.AmazonTest -->
